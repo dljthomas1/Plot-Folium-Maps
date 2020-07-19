@@ -33,7 +33,11 @@ def get_folium_map(df, latitude_col,longitude_col, colour_by = None, popup_name_
   # Check if a colour column has been defined
   # if so, set up a colour dictionary to define some colours
   if colour_by:    
-    colour_options = ['blue', 'red', 'green', 'darkgreen', 'darkpurple', 'darkred', 'gray', 'darkblue', 'lightblue', 'lightgray', 'lightgreen', 'lightred', 'orange', 'pink', 'purple', 'cadetblue','black']
+    colour_options = ['blue', 'red', 'green', 'brown','yellow','purple','orange',
+                      'darkgreen', 'darkpurple', 'darkred', 'gray', 'darkblue', 'lightblue', 
+                      'lightgray', 'lightgreen', 'lightred', 'orange', 'pink', 'purple','cadetblue',
+                      'black']
+    
     categories = np.unique(df[colour_by])
     colours = np.linspace(0, 1, len(categories))
     colourdict = dict(zip(categories, colours))
